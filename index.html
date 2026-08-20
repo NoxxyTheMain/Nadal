@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NANDAL — meaningful connections, made safely." />
+    <title>NANDAL — Meet with intention</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="member.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="NANDAL home">NANDAL<span>•</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#safety">Safety</a>
+      </nav>
+      <button class="text-button" data-open-modal="login">Log in</button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">CONNECTIONS WITH INTENTION</p>
+          <h1>Meet someone worth <em>showing up</em> for.</h1>
+          <p class="hero-text">NANDAL is a thoughtful space to meet, connect, and build something real—at your own pace.</p>
+          <div class="hero-actions">
+            <button class="primary-button" data-open-modal="join">Create your profile <span>→</span></button>
+            <a class="quiet-link" href="#how-it-works">Discover NANDAL</a>
+          </div>
+          <p class="age-note">For adults 18+ only. By joining, you agree to our <a href="community.html">community standards</a>.</p>
+        </div>
+        <div class="hero-visual" aria-label="Profile card examples">
+          <div class="shape shape-one"></div><div class="shape shape-two"></div>
+          <article class="profile-card profile-main">
+            <div class="avatar avatar-one">AM</div>
+            <div><p class="profile-name">Amara, 27 <span class="verified">✓</span></p><p class="profile-meta">Nairobi · Loves slow Sundays</p></div>
+            <button class="heart" aria-label="Like Amara">♡</button>
+          </article>
+          <article class="profile-card profile-side">
+            <div class="avatar avatar-two">SK</div>
+            <div><p class="profile-name">Sam, 30</p><p class="profile-meta">Creative at heart</p></div>
+          </article>
+          <div class="match-bubble"><span>✦</span> A new connection</div>
+        </div>
+      </section>
+
+      <section class="promise" id="how-it-works">
+        <p class="eyebrow">A BETTER WAY TO DATE</p>
+        <h2>Less noise. More possibility.</h2>
+        <div class="promise-grid">
+          <article><span class="number">01</span><h3>Be yourself</h3><p>Share the little things that make you, you. Your profile is more than a photo.</p></article>
+          <article><span class="number">02</span><h3>Discover thoughtfully</h3><p>Find people with shared values, interests, and the same kind of intention.</p></article>
+          <article><span class="number">03</span><h3>Start something real</h3><p>When the interest is mutual, start a conversation in a calm, private space.</p></article>
+        </div>
+      </section>
+
+      <section class="safety" id="safety">
+        <div><p class="eyebrow">BUILT FOR KINDNESS</p><h2>Good dating starts with feeling safe.</h2></div>
+        <div class="safety-list"><p><span>✓</span> Adults-only community</p><p><span>✓</span> Easy block and report tools</p><p><span>✓</span> Private by default</p></div>
+      </section>
+
+      <section class="closing"><p class="eyebrow">YOUR NEXT CHAPTER</p><h2>There’s someone new to meet.</h2><button class="primary-button light-button" data-open-modal="join">Join NANDAL <span>→</span></button></section>
+    </main>
+
+    <section id="member-app" hidden>
+      <header class="app-header"><a class="brand" href="#">NANDAL<span>•</span></a><div class="member-menu"><span id="member-name"></span><button class="text-button" id="sign-out">Log out</button></div></header>
+      <div class="app-shell"><aside class="app-nav"><button class="app-nav-item active" data-view="discover">Discover</button><button class="app-nav-item" data-view="matches">Matches <span id="match-count"></span></button><button class="app-nav-item" data-view="messages">Messages</button><button class="app-nav-item" data-view="profile">My profile</button><button class="app-nav-item" data-view="safety">Safety</button><button class="app-nav-item" data-view="moderation" id="nav-moderation" hidden>Moderation</button></aside>
+      <div class="app-content">
+        <section class="app-view" id="discover-view"><p class="eyebrow">DISCOVER</p><h2>People worth meeting.</h2><p class="view-intro">Explore profiles with intention. Every like is private unless it becomes mutual.</p><div id="discover-grid" class="discover-grid"></div><p class="empty-state" id="discover-empty" hidden>No new profiles right now. Check back soon.</p></section>
+        <section class="app-view" id="matches-view" hidden><p class="eyebrow">YOUR MATCHES</p><h2>Mutual interest.</h2><div id="matches-grid" class="matches-grid"></div><p class="empty-state" id="matches-empty">When someone likes you back, they’ll appear here.</p></section>
+        <section class="app-view" id="messages-view" hidden><p class="eyebrow">MESSAGES</p><h2>Start with hello.</h2><div class="messages-layout"><div id="thread-list" class="thread-list"></div><div id="thread-panel" class="thread-panel" hidden><header id="thread-header" class="thread-header"></header><div id="thread-messages" class="thread-messages"></div><form id="compose-form" class="compose-form"><label class="sr-only" for="compose-body">Message</label><textarea id="compose-body" name="body" required maxlength="2000" placeholder="Write something kind…" rows="2"></textarea><button class="primary-button" type="submit">Send <span>→</span></button></form></div></div><p class="empty-state" id="messages-empty" hidden>No conversations yet. Match with someone first.</p></section>
+        <section class="app-view" id="profile-view" hidden><p class="eyebrow">MY PROFILE</p><h2>Show the real you.</h2><div class="profile-editor"><form id="profile-form"><label>Display name<input name="display_name" required minlength="2" maxlength="40" /></label><label>City<input name="city" maxlength="80" placeholder="Where are you based?" /></label><label>About you<textarea name="bio" maxlength="500" placeholder="A little about you, your interests, and what matters to you."></textarea></label><label>Interests <span class="field-hint">Separate with commas</span><input name="interests" maxlength="250" placeholder="Music, travel, cooking" /></label><label class="check-label"><input name="is_discoverable" type="checkbox" checked /> <span>Show my profile in Discover</span></label><button class="primary-button" type="submit">Save profile <span>→</span></button><p class="form-message" id="profile-message"></p></form><div class="photo-editor"><h3>Your photos</h3><p>JPG, PNG, or WebP. Maximum 5 MB each.</p><label class="upload-button">Add a photo<input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" hidden /></label><div id="photo-list" class="photo-list"></div></div></div></section>
+        <section class="app-view" id="safety-view" hidden><p class="eyebrow">SAFETY CENTRE</p><h2>You stay in control.</h2><div class="safety-panel"><h3>Block someone</h3><p>Blocking immediately prevents matching and hides your profiles from one another.</p><form id="block-form"><label>Select a match to block<select name="blocked_id" id="block-select" required><option value="">Choose someone…</option></select></label><button class="primary-button" type="submit">Block</button><p class="form-message" id="block-message"></p></form><h3>Report a concern</h3><p>Reports go to NANDAL’s moderation queue. We review harassment, fake profiles, spam, underage users, and inappropriate content.</p><h3>In an emergency</h3><p>NANDAL is not an emergency service. Contact local emergency services if you believe someone is in immediate danger.</p><h3>Delete your account</h3><p>This immediately removes your photos, clears your profile details, and hides you from Discover. Existing matches will see your name as “Deleted user.” To remove your login credentials entirely, email <a href="mailto:privacy@nandal.app">privacy@nandal.app</a>.</p><button class="text-button danger" id="delete-account" type="button">Delete my account</button><p class="form-message" id="delete-message"></p></div></section>
+        <section class="app-view" id="moderation-view" hidden><p class="eyebrow">MODERATION</p><h2>Reports queue.</h2><p class="view-intro">Visible only to moderator accounts. Review reports, leave a note, and resolve, dismiss, or hide the reported profile from Discover.</p><div id="moderation-list" class="moderation-list"></div><p class="empty-state" id="moderation-empty" hidden>No reports right now.</p></section>
+      </div></div>
+    </section>
+    <footer><a class="brand" href="#top">NANDAL<span>•</span></a><p>© <span id="year"></span> NANDAL. Meet with care.</p><div><a href="privacy.html">Privacy</a><a href="community.html">Community standards</a></div></footer>
+
+    <dialog id="auth-modal" aria-labelledby="modal-title">
+      <button class="close" aria-label="Close" data-close-modal>×</button>
+      <section id="join-form" class="auth-panel">
+        <p class="eyebrow">WELCOME TO NANDAL</p><h2 id="modal-title">Start your story.</h2><p class="modal-intro">Create your profile in a few calm, simple steps.</p>
+        <form id="signup-form">
+          <label>First name<input name="name" type="text" autocomplete="given-name" required minlength="2" placeholder="Your first name" /></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label>
+          <label>Date of birth<input name="birthdate" type="date" required /></label>
+          <label>Password<input name="password" type="password" autocomplete="new-password" required minlength="10" placeholder="At least 10 characters" /></label>
+          <label class="check-label"><input name="age" type="checkbox" required /> <span>I confirm that I am 18 or older.</span></label>
+          <button class="primary-button full" type="submit">Continue <span>→</span></button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+        <p class="form-footer">Already have an account? <button class="inline-button" data-switch="login">Log in</button></p>
+      </section>
+      <section id="login-form" class="auth-panel" hidden>
+        <p class="eyebrow">WELCOME BACK</p><h2>Good to see you.</h2><p class="modal-intro">Log in to continue your conversations.</p>
+        <form id="signin-form"><label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com" /></label><label>Password<input name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="Your password" /></label><button class="primary-button full" type="submit">Log in <span>→</span></button><p class="form-message" aria-live="polite"></p><button id="resend-confirmation" class="inline-button" type="button" hidden>Resend confirmation email</button></form>
+        <p class="form-footer">New here? <button class="inline-button" data-switch="join">Create a profile</button></p>
+      </section>
+    </dialog>
+
+    <dialog id="report-modal" aria-labelledby="report-title">
+      <button class="close" aria-label="Close" data-close-report>×</button>
+      <section class="auth-panel">
+        <p class="eyebrow">REPORT</p>
+        <h2 id="report-title">Help us keep NANDAL safe.</h2>
+        <p class="modal-intro">Your report goes to our moderation queue. We review every submission carefully.</p>
+        <form id="report-form">
+          <input type="hidden" name="reported_id" id="report-target" />
+          <label>Reason
+            <select name="reason" required>
+              <option value="">Select a reason…</option>
+              <option value="harassment">Harassment</option>
+              <option value="fake_profile">Fake profile</option>
+              <option value="nudity">Inappropriate photos</option>
+              <option value="spam">Spam or scam</option>
+              <option value="underage">Underage user</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label>Additional details <span class="field-hint">Optional</span>
+            <textarea name="details" maxlength="2000" rows="3" placeholder="Anything else we should know?"></textarea>
+          </label>
+          <button class="primary-button full" type="submit">Submit report <span>→</span></button>
+          <p class="form-message" id="report-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="nandal-api.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

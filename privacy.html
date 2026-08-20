@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NANDAL Privacy Policy — how we handle your data." />
+    <title>Privacy — NANDAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NANDAL home">NANDAL<span>•</span></a>
+      <nav aria-label="Legal navigation">
+        <a href="privacy.html">Privacy</a>
+        <a href="community.html">Community standards</a>
+      </nav>
+    </header>
+
+    <main class="legal-page">
+      <a class="legal-back" href="index.html">← Back to NANDAL</a>
+      <p class="eyebrow">YOUR PRIVACY</p>
+      <h1>Privacy policy</h1>
+      <p class="legal-meta">Last updated: August 2026</p>
+
+      <p>NANDAL is built for adults who want meaningful connections. This policy explains what we collect, why we collect it, and the choices you have.</p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li><strong>Account details</strong> — email address, password (stored securely by our auth provider), display name, and date of birth to confirm you are 18 or older.</li>
+        <li><strong>Profile information</strong> — bio, city, interests, photos you choose to upload, and your discoverability preference.</li>
+        <li><strong>Activity data</strong> — swipes, matches, messages you send, blocks, and reports you submit.</li>
+        <li><strong>Technical data</strong> — basic logs needed to operate the service, such as session timestamps and error diagnostics.</li>
+      </ul>
+
+      <h2>How we use your data</h2>
+      <ul>
+        <li>To create and manage your account and profile.</li>
+        <li>To show you other members in Discover and facilitate matches and messaging.</li>
+        <li>To keep the community safe through blocking, reporting, and moderation.</li>
+        <li>To improve reliability, prevent abuse, and enforce our community standards.</li>
+      </ul>
+
+      <h2>Who can see your information</h2>
+      <ul>
+        <li>Your profile is visible to other signed-in members when you opt in to Discover.</li>
+        <li>Your primary photo may appear in Discover; additional photos are shared with mutual matches.</li>
+        <li>Messages are private between matched members.</li>
+        <li>Moderators may review reports and related content to investigate concerns.</li>
+      </ul>
+
+      <h2>Storage and security</h2>
+      <p>Account authentication, database records, and photo storage are handled through Supabase with industry-standard encryption in transit. No system is perfectly secure; please use a strong, unique password and report suspicious activity promptly.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>Update or delete profile details from My profile.</li>
+        <li>Hide your profile from Discover at any time.</li>
+        <li>Block or report other members from within the app.</li>
+        <li>Delete your account from Safety → Delete my account. This removes your photos, clears your display name, bio, city, and interests, and hides you from Discover immediately. Matches you've already made will see your name as "Deleted user," and your account can no longer sign in. To also remove your login credentials from our authentication provider, email <a href="mailto:privacy@nandal.app">privacy@nandal.app</a>.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy? Email <a href="mailto:privacy@nandal.app">privacy@nandal.app</a>.</p>
+    </main>
+
+    <footer>
+      <a class="brand" href="index.html">NANDAL<span>•</span></a>
+      <p>© <span id="year"></span> NANDAL. Meet with care.</p>
+      <div><a href="privacy.html">Privacy</a><a href="community.html">Community standards</a></div>
+    </footer>
+    <script>document.querySelector('#year').textContent=new Date().getFullYear()</script>
+  </body>
+</html>
